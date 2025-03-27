@@ -9,7 +9,7 @@ import { IconSearchContent } from "./UI/icons/IconSearchContent";
 
 export function Navbar() {
   return (
-    <div className="flex h-20 w-full items-center justify-between  ">
+    <div className="flex h-20 w-full items-center justify-between">
       {/* Logo */}
       <div className="pl-10 bg-primary h-full flex items-center min-w-[336px]">
         <Link href="/" className="flex gap-2.5 items-center justify-center">
@@ -19,7 +19,7 @@ export function Navbar() {
       </div>
 
       {/* Search */}
-      <div className="relative w-full max-w-[801px] flex justify-end bg-linear-to-r from-secondary   to-white   h-full">
+      <div className="relative w-full  flex justify-end bg-linear-to-r from-secondary   to-white   h-full">
         <Search className="absolute left-8 top-1/2 h-6 w-6 -translate-y-1/2 transform text-primary " />
         <Input type="search" placeholder="Search for products" className="h-full w-full flex  border-none  shadow-none placeholder:text-secondary-t pl-20 text-sm focus-visible:ring-0" />
       </div>

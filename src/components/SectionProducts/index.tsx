@@ -1,9 +1,10 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "../UI/tabs";
 import { FilterRow } from "./partials/FilterRow";
+import { ListProducts } from "./partials/FilterRow/partials/ListProducts";
 
 export function SectionProducts() {
   return (
-    <Tabs defaultValue={"proposed"}>
+    <Tabs defaultValue="proposed">
       <div className="flex">
         <TabsList className="border-b flex w-fit h-12  gap-8 justify-start rounded-none bg-transparent p-0 ">
           <TabsTrigger variant="simple" value="proposed" className="ml-10">
@@ -25,10 +26,10 @@ export function SectionProducts() {
         <div className="w-full border-b" />
       </div>
       <FilterRow />
+
       {/* Tab content */}
       <TabsContent value="proposed" className="p-6">
-        <h2 className="text-xl font-medium mb-4">Proposed Items</h2>
-        <p className="text-[#6a6a69]">Items that have been proposed to the client but not yet approved.</p>
+        <ListProducts />
       </TabsContent>
 
       <TabsContent value="approved" className="p-6">

@@ -3,7 +3,6 @@ import { ButtonCopy } from "./partials/ButtonCopy";
 export const Header = () => {
   return (
     <div className="border-b border-neutral-foreground">
-      {/* Breadcrumb and Share button */}
       <div className="flex items-center justify-between px-6 pt-4 pb-4">
         <div className="flex items-center">
           <span className="text-[28px] font-medium text-secondary-t">Projects</span>
@@ -19,12 +18,10 @@ export const Header = () => {
         </div>
       </div>
 
-      {/* Order Information */}
       <div className="grid grid-cols-4 gap-6 px-6 min-h-48 ">
-        {/* To section */}
         <div className="flex flex-col border-r justify-between border-neutral-foreground pb-6 h-full">
           <div className="flex flex-col">
-            <span className="text-sm  font-medium mb-1">To</span>
+            <span className="font-medium mb-1">To</span>
             <span>Rino Platania</span>
             <span className="text-sm ">Shipping to Milan, Italy</span>
           </div>
@@ -34,29 +31,24 @@ export const Header = () => {
           </div>
         </div>
 
-        {/* To be paid section */}
         <div className="flex flex-col border-r  border-neutral-foreground pb-6 h-full">
-          <span className="text-sm font-medium mb-1">To be paid</span>
-          <span className="font-medium">0,00 €</span>
-          <span className="text-xs text-secondary-t ">VAT 22% included</span>
+          <span className=" font-medium mb-1">To be paid</span>
+          <span className="text-2xl">0,00 €</span>
+          <span className="text-sm text-secondary-t ">VAT 22% included</span>
         </div>
 
-        {/* paid section */}
         <div className="flex flex-col border-r  border-neutral-foreground pb-6 h-full">
-          <span className="text-sm font-medium  mb-1">paid</span>
-          <span className="font-medium">0,00 €</span>
-          <span className="text-xs text-secondary-t">VAT 22% included</span>
+          <span className=" font-medium  mb-1">Paid</span>
+          <span className=" text-2xl">0,00 €</span>
+          <span className="text-sm text-secondary-t">VAT 22% included</span>
         </div>
 
-        {/* Total Order section */}
         <div className="flex flex-col pb-6 h-full">
-          <span className="text-sm font-medium  mb-1">Total Order</span>
-          <span className="font-medium">0,00 €</span>
-          <span className="text-xs text-secondary-t ">VAT 22% included</span>
+          <span className=" font-medium  mb-1">Total Order</span>
+          <span className="text-2xl">0,00 €</span>
+          <span className="text-sm text-secondary-t ">VAT 22% included</span>
         </div>
       </div>
-
-      {/* Project ID and Last Edit */}
     </div>
   );
 };

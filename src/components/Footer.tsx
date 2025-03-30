@@ -1,10 +1,13 @@
+import { Button } from "./UI/button";
+import { ChevronDown } from "lucide-react";
+
 export const Footer = () => (
   <footer className="bg-primary text-white py-8 w-full">
-    <div className=" px-6">
+    <div className=" px-10">
       <div className="grid grid-cols-4 gap-8 mb-8">
         <div>
           <h3 className="font-medium mb-4">About us</h3>
-          <ul className="space-y-2 text-sm text-gray-400">
+          <ul className="space-y-2 text-sm ">
             <li>Platform overview</li>
             <li>How to</li>
             <li>Register</li>
@@ -13,7 +16,7 @@ export const Footer = () => (
         </div>
         <div>
           <h3 className="font-medium mb-4">Customer Service</h3>
-          <ul className="space-y-2 text-sm text-gray-400">
+          <ul className="space-y-2 text-sm ">
             <li>Contact us</li>
             <li>FAQ</li>
             <li>Payment methods</li>
@@ -25,7 +28,7 @@ export const Footer = () => (
         </div>
         <div>
           <h3 className="font-medium mb-4">Catalogue</h3>
-          <ul className="space-y-2 text-sm text-gray-400">
+          <ul className="space-y-2 text-sm ">
             <li>Furniture</li>
             <li>Lighting</li>
             <li>Kitchen</li>
@@ -36,43 +39,52 @@ export const Footer = () => (
           </ul>
         </div>
         <div>
-          <div className="flex items-center gap-2 mb-6">
-            <span className="font-bold text-xl">mohd</span>
-            <div className="bg-mohd-red text-white text-xs rounded-sm px-1 py-0 h-4">PRO</div>
+          <div className="flex items-center justify-end  gap-2 mb-6">
+            <div className="pl-10 bg-primary h-full flex items-center  gap-2.5">
+              <span className="text-[32px] font-bold font-soehne_breit text-white">mohd</span>
+              <span className=" rounded-full bg-destructive px-3 py-1 align-middle font-medium text-sm mt-2 text-white">Pro</span>
+            </div>
           </div>
         </div>
       </div>
 
-      <div className="flex justify-between items-center pt-6 border-t border-gray-700">
-        <div className="flex items-center gap-4">
-          <div className="text-sm text-gray-400">Language</div>
-          <button className="text-white border-gray-700 gap-1">English</button>
-
-          <div className="text-sm text-gray-400 ml-4">Currency</div>
-          <button className="text-white border-gray-700 gap-1">EUR</button>
-
-          <button className="ml-4">Confirm</button>
+      <div className="flex justify-between items-end pt-6">
+        <div className="flex gap-4 items-end">
+          <div className="flex-col flex gap-4">
+            <div className="text-sm text-secondary-t">Language</div>
+            <Button variant="outline" className="w-40 justify-between">
+              English <ChevronDown className="ml-2 h-4 w-4" />
+            </Button>
+          </div>
+          <div className="flex-col flex gap-4">
+            <div className="text-sm text-secondary-t">Currency</div>
+            <Button variant="outline" className="w-28 justify-between">
+              EUR <ChevronDown className="ml-2 h-4 w-4" />
+            </Button>
+          </div>
+          <Button variant="outline" className="border-none bg-outline-secondary px-10">
+            Confirm
+          </Button>
         </div>
 
-        <div className="text-sm text-gray-400">
+        <div className="text-sm flex flex-col items-end justify-end h-full">
           Secure payments
           <div className="flex items-center gap-2 mt-2">
-            {/* Payment method icons would go here */}
-            <div className="w-8 h-5 bg-gray-700 rounded"></div>
-            <div className="w-8 h-5 bg-gray-700 rounded"></div>
-            <div className="w-8 h-5 bg-gray-700 rounded"></div>
-            <div className="w-8 h-5 bg-gray-700 rounded"></div>
-            <div className="w-8 h-5 bg-gray-700 rounded"></div>
-            <div className="w-8 h-5 bg-gray-700 rounded"></div>
+            <div className="w-8 h-5 bg-gray-700 rounded" />
+            <div className="w-8 h-5 bg-gray-700 rounded" />
+            <div className="w-8 h-5 bg-gray-700 rounded" />
+            <div className="w-8 h-5 bg-gray-700 rounded" />
+            <div className="w-8 h-5 bg-gray-700 rounded" />
+            <div className="w-8 h-5 bg-gray-700 rounded" />
           </div>
         </div>
       </div>
-
-      <div className="text-xs text-gray-500 mt-8">© 2011-2022 Mohd S.r.l. C.a.p.s. S.S. 114 Km 4,300 Giarre, Trecastagni (Messina) ITALIA (IT02770240838)</div>
-
-      <div className="flex justify-between items-center mt-2 text-xs text-gray-500">
-        <div>Privacy Policy</div>
-        <div>Cookies Policy</div>
+      <div className="flex justify-between  pt-8 items-baseline mt-16 text-xs text-gray-500 border-t-[0.5px] border-secondary-t">
+        <div className="text-xs text-gray-500">© 2011-2022 Mollura & C. S.p.a. S.S. 114 Km 6, 400 98128, Tremestieri Messina | P.IVA IT02759750835</div>
+        <div className="flex gap-4">
+          <div>Privacy Policy</div>
+          <div>Cookies Policy</div>
+        </div>
       </div>
     </div>
   </footer>

@@ -2,9 +2,10 @@
 
 import { Button } from "@/components/UI/button";
 import { usePathname } from "next/navigation";
-import { toast, Toaster } from "sonner";
+import { ComponentProps } from "react";
+import { toast } from "sonner";
 
-export const ButtonCopy = () => {
+export const ButtonCopy = ({ ...props }: ComponentProps<typeof Button>) => {
   const pathname = usePathname();
   const handleCopy = async () => {
     try {
@@ -16,8 +17,8 @@ export const ButtonCopy = () => {
   };
 
   return (
-    <>
-      <Button onClick={handleCopy}>Share with client</Button>
-    </>
+    <Button onClick={handleCopy} {...props}>
+      Share with client
+    </Button>
   );
 };
